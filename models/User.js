@@ -1,35 +1,41 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
 
 const userSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: true,
+  name: { type: String, required: true, trim: true },
+  email: { 
+    type: String, 
+    required: true, 
     unique: true,
-    lowercase: true,
-    trim: true
+    validate: {
+      validator: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+      message: props => `${props.value} no es un email válido`
+    }
   },
-  password: {
-    type: String,
-    required: true
+  password: { 
+    type: String, 
+    required: true,
+    minlength: 12,
+    select: false // No se devuelve en consultas
   },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
-});
+  role: { 
+    type: String, 
+    enum: ['admin', 'editor', 'viewer'], 
+    default: 'viewer' 
+  },
+  lastLogin: { type: Date }
+}, { timestamps: true });
 
-// Hash de la contraseña antes de guardar
+// Hash de contraseña antes de guardar
 userSchema.pre('save', async function(next) {
   if (!this.isModified('password')) return next();
-  
-  try {
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
-    next();
-  } catch (err) {
-    next(err);
-  }
+  this.password = await bcrypt.hash(this.password, 12);
+  next();
 });
 
-module.exports = mongoose.model('User', userSchema);
+// Método para comparar contraseñas
+userSchema.methods.comparePassword = async function(candidatePassword) {
+  return await bcrypt.compare(candidatePassword, this.password);
+};
+
+export default mongoose.model('User', userSchema);
