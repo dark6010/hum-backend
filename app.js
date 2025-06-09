@@ -1,13 +1,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
+import dotenv from 'dotenv'; // Import dotenv
+dotenv.config();  
 import { securityMiddleware } from './config/security.js';
 import { errorHandler } from './utils/errorHandler.js';
 import authRoutes from './routes/auth.routes.js';
 import apiRoutes from './routes/api.routes.js';
 
 const app = express();
-
+console.log(1524, process.env.MONGODB_URI)
 // Conexión a MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -25,7 +27,7 @@ securityMiddleware(app);
 
 // Rutas
 app.use('/auth', authRoutes);
-app.use('/api', authenticateJWT, apiRoutes);
+app.use('/api', apiRoutes);
 
 // Manejo de errores
 app.use(errorHandler);

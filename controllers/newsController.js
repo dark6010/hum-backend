@@ -1,16 +1,17 @@
 import News from '../models/News.js';
-import { sanitizeInput } from '../middleware/sanitize.js';
+import { sanitizeInputNews } from '../middleware/sanitize.js';
 
-export const createNews = async (req, res, next) => {
+export const createNews = async ({ title, content, image, category, slug, excerpt, date }, res, next) => {
   try {
-    const { title, content, image } = sanitizeInput(req.body);
-    
+    console.log(req.file)
     const news = await News.create({
       title,
       content,
       image,
-      author: req.user.id,
-      status: 'draft'
+      category,
+      slug,
+      excerpt,
+      date
     });
 
     res.status(201).json({
@@ -21,5 +22,29 @@ export const createNews = async (req, res, next) => {
     next(error);
   }
 };
+export const getNews = async (req, res, next) => {
+    try {
+      const page = parseInt(req.query.page) || 1;
+      const limit = 10;
+      const skip = (page - 1) * limit;
+  
+      const news = await News.find()
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit);
+  
+      res.json({
+        success: true,
+        data: news,
+        pagination: {
+          page,
+          limit,
+          total: await News.countDocuments()
+        }
+      });
+    } catch (error) {
+      next(error);
+    }
+  };
 
 // ... (métodos para update, delete, etc)
