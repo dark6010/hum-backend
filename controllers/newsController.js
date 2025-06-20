@@ -1,17 +1,28 @@
 import News from '../models/News.js';
-import { sanitizeInputNews } from '../middleware/sanitize.js';
-
-export const createNews = async ({ title, content, image, category, slug, excerpt, date }, res, next) => {
+import {
+  NotFoundError,
+} from '../utils/errorHandler.js';
+  // export const createNews = async ({body, file, user, route }, res, next) => {
+export const createNews = async ({body:{title, content, category, excerpt}, files }, res, next) => {
+  const filesText = files.map( a=>a.filename ) 
+  // {
+  //   fieldname: 'image',
+  //   originalname: 'Screenshot 2025-06-06 093200.png',
+  //   encoding: '7bit',
+  //   mimetype: 'image/png',
+  //   destination: 'uploads/',
+  //   filename: 'image-1749590298052-774571788.png',
+  //   path: 'uploads\\image-1749590298052-774571788.png',
+  //   size: 64915
+  // }
+  // console.log(Object.keys(user))// [ 'userId', 'role', 'iat', 'exp' ]
   try {
-    console.log(req.file)
     const news = await News.create({
       title,
       content,
-      image,
+      images:filesText,
       category,
-      slug,
       excerpt,
-      date
     });
 
     res.status(201).json({
@@ -19,6 +30,7 @@ export const createNews = async ({ title, content, image, category, slug, excerp
       data: news
     });
   } catch (error) {
+    console.log(error)
     next(error);
   }
 };
@@ -45,6 +57,47 @@ export const getNews = async (req, res, next) => {
     } catch (error) {
       next(error);
     }
-  };
+};
+// export const updateNews = async ({body:{title, content, category, excerpt}, files, params:{id} }, res, next) => {
+export const updateNews = async ({body, files, params:{id} }, res, next) => {
+// export const updateNews = async (req, res, next) => {
+  const filesText = files.map( a=>a.filename )
+  if(Array.isArray(filesText) && filesText.length > 0){
+    body.images=filesText
+  }else{
+    delete body.images
+  }
+  // {
+  //   fieldname: 'image',
+  //   originalname: 'Screenshot 2025-06-06 093200.png',
+  //   encoding: '7bit',
+  //   mimetype: 'image/png',
+  //   destination: 'uploads/',
+  //   filename: 'image-1749590298052-774571788.png',
+  //   path: 'uploads\\image-1749590298052-774571788.png',
+  //   size: 64915
+  // }
+  // console.log(Object.keys(user))// [ 'userId', 'role', 'iat', 'exp' ]
+  try {
+    const existingNews = await News.findById(id);
+    if (!existingNews) {
+      throw new NotFoundError('bd: Noticia no encontrada');
+    }
+    const updatedNews = await News.findByIdAndUpdate(
+      id,
+      { $set: body },
+      { new: true, runValidators: true } // Retorna el documento actualizado y valida los campos
+    );
+
+    res.status(201).json({
+      success: true,
+      data: updatedNews
+    });
+  } catch (error) {
+    //console.log(error)
+    next(error);
+  }
+};
+  
 
 // ... (métodos para update, delete, etc)

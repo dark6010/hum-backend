@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
+import crypto from 'crypto'; // Node.js >= 16.0.0
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true, trim: true },
@@ -36,6 +37,22 @@ userSchema.pre('save', async function(next) {
 // Método para comparar contraseñas
 userSchema.methods.comparePassword = async function(candidatePassword) {
   return await bcrypt.compare(candidatePassword, this.password);
+};
+userSchema.methods.createPasswordResetToken = function () {
+  // 1. Generar token aleatorio (no hasheado aún)
+  const resetToken = crypto.randomBytes(32).toString('hex');
+
+  // 2. Hash el token y guardarlo en la DB
+  this.passwordResetToken = crypto
+    .createHash('sha256')
+    .update(resetToken)
+    .digest('hex');
+
+  // 3. Establecer expiración (ej. 10 minutos)
+  this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
+
+  // 4. Devolver el token sin hashear (para el email)
+  return resetToken;
 };
 
 export default mongoose.model('User', userSchema);

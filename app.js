@@ -2,14 +2,19 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv'; // Import dotenv
-dotenv.config();  
+dotenv.config();
+
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 import { securityMiddleware } from './config/security.js';
 import { errorHandler } from './utils/errorHandler.js';
 import authRoutes from './routes/auth.routes.js';
 import apiRoutes from './routes/api.routes.js';
 
 const app = express();
-console.log(1524, process.env.MONGODB_URI)
 // Conexión a MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -28,7 +33,7 @@ securityMiddleware(app);
 // Rutas
 app.use('/auth', authRoutes);
 app.use('/api', apiRoutes);
-
+app.use('/images', express.static(path.join(__dirname, 'uploads')));
 // Manejo de errores
 app.use(errorHandler);
 

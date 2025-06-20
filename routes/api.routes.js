@@ -1,5 +1,7 @@
 import express from 'express';
-import { authenticateJWT, authorizeRoles } from '../middleware/auth.js';
+import path from 'path'
+import { authenticateJWT, authorizeRoles, refreshTokenMiddleware } from '../middleware/auth.js';
+import { multerErrorHandler } from '../middleware/multerErrorHandler.js';
 import {
   validateCreateNews,
   validateUpdateNews
@@ -8,7 +10,7 @@ import { rateLimitApi } from '../middleware/rateLimit.js';
 import {
   getNews,
   createNews,
-  //updateNews,
+  updateNews,
   //deleteNews,
   //getNewsById
 } from '../controllers/newsController.js';
@@ -37,10 +39,11 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage,
     limits: {
-        fileSize: 5 * 1024 * 1024
+        fileSize: 5 * 1024 * 1024,
+        files: 3
     },
     fileFilter: (req, file, cb) => {
-        const allowedMimes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf'];
+        const allowedMimes = ['image/jpeg', 'image/png', 'image/webp'];
         if (allowedMimes.includes(file.mimetype)) {
             cb(null, true);
         } else {
@@ -55,27 +58,32 @@ const router = express.Router();
 router.use(rateLimitApi);
 
 // ====================== Rutas Públicas ======================
-// router.get('/news', getNews);
+router.get('/news', getNews);
 // router.get('/news/:id', getNewsById);
 
-// ====================== Rutas Protegidas ======================
-router.use(authenticateJWT); // Todas las rutas debajo requieren autenticación
 
+// ====================== Rutas Protegidas ======================
+router.use(authenticateJWT); // Todas las rutas debajo requieren autenticación hay req.user
+// ====================== Refresh token ======================
+router.use(refreshTokenMiddleware); // Todas las rutas debajo requieren autenticación
 // ---- Noticias ----
 router.post(
   '/news',
   authorizeRoles('admin', 'editor'), // Solo admins y editores
-  upload.single('miImagen'),
+  upload.array('images'),
+  multerErrorHandler,
   validateCreateNews,
   createNews
 );
+router.put(
+  '/news/:id',
+  authorizeRoles('admin', 'editor'), // Solo admins y editores
+  upload.array('images'),
+  multerErrorHandler,
+  validateUpdateNews,
+  updateNews
+);
 
-// router.patch(
-//   '/news/:id',
-//   authorizeRoles('admin', 'editor'),
-//   validateUpdateNews,
-//   updateNews
-// );
 
 // router.delete(
 //   '/news/:id',
