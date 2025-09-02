@@ -6,10 +6,11 @@ import {
   logout,
   // refreshToken,
   // forgotPassword,
-  resetPassword
+  resetPassword,
+  check
 } from '../controllers/authController.js';
 import { rateLimitAuth } from '../middleware/rateLimit.js';
-
+import { authenticateJWT } from '../middleware/auth.js';
 const router = express.Router();
 
 // Limitar intentos de autenticación
@@ -50,6 +51,8 @@ router.post(
 // Cerrar sesión
 router.post('/logout', logout);
 
+
+router.get('/check', authenticateJWT, check);
 // Refresh Token (para renovar JWT)
 // //router.post('/refresh-token', refreshToken);
 

@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "68478dc3a224959692e337dd"
+  },
+  "name": "grover plaza quiroga",
+  "email": "grover.plaza@gmail.com",
+  "password": "$2b$12$BKg7vaVvLNdqYXSsrfKPOe/o3U8KdaHZFZCKZ.L.FuFXKlFpjKRyy",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2025-06-10T01:43:31.205Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T01:43:31.205Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6849d3b11b4f1030ddca5012"
+  },
+  "name": "mario",
+  "email": "mario@gmail.com",
+  "password": "$2b$12$oCMBLHYkFoeqgcmeH1RAJ.eNDS0/1hpfTmu2.cEGP4dSfjbbV7SSG",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2025-06-11T19:06:25.297Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T19:06:25.297Z"
+  },
+  "__v": 0
+}]

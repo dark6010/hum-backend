@@ -2,7 +2,7 @@ import rateLimit from 'express-rate-limit';
 
 export const rateLimitAuth = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutos
-  max: 5, // Máximo 5 intentos por IP
+  max: 50, // Máximo 5 intentos por IP
   message: {
     success: false,
     error: 'Demasiados intentos. Intenta nuevamente en 15 minutos'

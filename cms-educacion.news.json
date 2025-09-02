@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "6849d53b1b4f1030ddca5018"
+  },
+  "title": "Titulo modificado 2",
+  "content": "Contenido modificado de alrededor de mas de 50 caracteres que debe ser segiuro esto que debe de tener 50 caracteres",
+  "category": "nacional internacional",
+  "excerpt": "Resumen lorem ipsun",
+  "images": [
+    "images-1749669584572-440640563.jpg"
+  ],
+  "createdAt": {
+    "$date": "2025-06-11T19:12:59.435Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T19:12:59.440Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6849d7541b4f1030ddca5023"
+  },
+  "title": "Esta es otra nueva noticia",
+  "content": "Lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. it was popularised in the 1960s with the release of letraset sheets containing lorem ipsum passages, and more recently with desktop publishing software like aldus pagemaker including versions of lorem ipsum.",
+  "category": "nacional internacional",
+  "excerpt": "Resumen lorem ipsun",
+  "images": [
+    "images-1749669716603-16536785.webp"
+  ],
+  "createdAt": {
+    "$date": "2025-06-11T19:21:56.614Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T19:21:56.615Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6849d8841b4f1030ddca502b"
+  },
+  "title": "Titulo creado 3",
+  "content": "Lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. it was popularised in the 1960s with the release of letraset sheets containing lorem ipsum passages, and more recently with desktop publishing software like aldus pagemaker including versions of lorem ipsum",
+  "category": "convotatoria admision",
+  "excerpt": "Trata acerca la toticia titulo 3",
+  "images": [
+    "images-1749670020913-772846665.webp"
+  ],
+  "createdAt": {
+    "$date": "2025-06-11T19:27:00.950Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T19:27:00.952Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685620f562d67ff630f64b30"
+  },
+  "title": "Titulo 4",
+  "content": "Lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. it was popularised in the 1960s with the release of letraset sheets containing lorem ipsum passages, and more recently with desktop publishing software like aldus pagemaker including versions of lorem ipsum",
+  "category": "convotatoria admision",
+  "excerpt": "Trata acerca la toticia titulo 3",
+  "images": [
+    "images-1750474997451-385025617.jpg"
+  ],
+  "createdAt": {
+    "$date": "2025-06-21T03:03:17.498Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T03:03:17.518Z"
+  },
+  "__v": 0
+}]

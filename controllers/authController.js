@@ -10,7 +10,8 @@ const cookieOptions = {
   httpOnly: true,
   secure: process.env.NODE_ENV === 'production',
   sameSite: 'strict',
-  maxAge: 7 * 24 * 60 * 60 * 1000 // 7 días
+  maxAge: 7 * 24 * 60 * 60 * 1000, // 7 días
+  // domain: process.env.NODE_ENV === 'development' ? 'localhost' : '.midominio.com'
 };
 // Helper para generar tokens
 const generateAuthTokens = (user) => {
@@ -188,7 +189,40 @@ export const refreshToken = async (req, res, next) => {
     next(error);
   }
 };
+// Verificar estado de autenticación y devolver información del usuario
+export const check = async (req, res, next) => {
+  try {
+    // El middleware de autenticación ya verificó el token y adjuntó el usuario a req.user
+    if (!req.user) {
+      // throw new UnauthorizedError('No autenticado');
+      res.status(200).json({
+        success: false,
+      });
+    }else{
+      // Buscar el usuario actual en la base de datos para obtener información fresca
+      const user = await User.findById(req.user.userId).select('-password');
+  
+      if (!user) {
+        throw new UnauthorizedError('Usuario no encontrado');
+      }
+      res.status(200).json({
+        success: true,
+        data: { 
+          user: { 
+            id: user._id, 
+            name: user.name, 
+            email: user.email, 
+            role: user.role 
+          } 
+        }
+      });
+    }
 
+
+  } catch (error) {
+    next(error);
+  }
+};
 // import sendEmail from '../utils/sendEmail.js'; // Configura esto según tu servicio de email
 
 // export const forgotPassword = async (req, res, next) => {

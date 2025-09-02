@@ -12,15 +12,16 @@ const cookieOptions = {
 
 export const authenticateJWT = (req, res, next) => {
   const token = req.cookies?.accessToken || req.headers.authorization?.split(' ')[1];
-  if (!token) throw new UnauthorizedError('Acceso no autorizado');
-
-
-  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
-    if (err) throw new UnauthorizedError('Token inválido');
-    // if (err) res.resdirect('/');
-    req.user = user;
-    next();
-  });
+  // if (!token) throw new UnauthorizedError('Acceso no autorizado');
+  if (!token) res.status(200).json({
+    success: false,
+  })
+  else jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+      if (err) throw new UnauthorizedError('Token inválido');
+      // if (err) res.resdirect('/');
+      req.user = user;
+      next();
+    });
 };
 
 export const authorizeRoles = (...roles) => {
