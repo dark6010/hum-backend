@@ -11,7 +11,7 @@ import {
   getNews,
   createNews,
   updateNews,
-  //deleteNews,
+  deleteNews,
   //getNewsById
 } from '../controllers/newsController.js';
 // import {
@@ -85,11 +85,11 @@ router.put(
 );
 
 
-// router.delete(
-//   '/news/:id',
-//   authorizeRoles('admin'), // Solo admins
-//   deleteNews
-// );
+router.delete(
+  '/news/:id',
+  authorizeRoles('admin'), // Solo admins
+  deleteNews
+);
 
 // ---- Docentes ----
 // router.get('/teachers', getTeachers);

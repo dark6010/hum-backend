@@ -98,6 +98,25 @@ export const updateNews = async ({body, files, params:{id} }, res, next) => {
     next(error);
   }
 };
-  
+export const deleteNews = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    const news = await News.findByIdAndDelete(id);
+    
+    if (!news) {
+      throw new NotFoundError('Noticia no encontrada');
+    }
+
+    res.json({
+      success: true,
+      message: 'Noticia eliminada exitosamente',
+      data: news
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
 
 // ... (métodos para update, delete, etc)
