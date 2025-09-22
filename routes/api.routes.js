@@ -12,7 +12,7 @@ import {
   createNews,
   updateNews,
   deleteNews,
-  //getNewsById
+  getNewsById
 } from '../controllers/newsController.js';
 // import {
 //   getTeachers,
@@ -59,7 +59,7 @@ router.use(rateLimitApi);
 
 // ====================== Rutas Públicas ======================
 router.get('/news', getNews);
-// router.get('/news/:id', getNewsById);
+router.get('/news/:id', getNewsById);
 
 
 // ====================== Rutas Protegidas ======================

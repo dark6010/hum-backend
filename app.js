@@ -19,8 +19,28 @@ const app = express();
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  autoIndex: process.env.NODE_ENV !== 'production'
+  autoIndex: process.env.NODE_ENV !== 'production',
+  dbName: 'cms-educacion'
 });
+//en mongo atlas se debe especificar, la ruta local ahi mismo se puede escoger
+// Eventos de conexión
+mongoose.connection.on('connected', async () => {
+  console.log('✅ Conectado a MongoDB correctamente');
+  const collections = await mongoose.connection.db.listCollections().toArray();
+    console.log('📚 Colecciones disponibles:');
+    collections.forEach(collection => {
+      console.log('   -', collection.name);
+    });
+});
+
+mongoose.connection.on('error', (err) => {
+  console.error('❌ Error de conexión a MongoDB:', err);
+});
+
+mongoose.connection.on('disconnected', () => {
+  console.log('⚠️  Desconectado de MongoDB');
+});
+
 
 // Middlewares básicos
 app.use(express.json({ limit: '10kb' }));

@@ -75,10 +75,14 @@ export const login = async (req, res, next) => {
     if (!email || !password) {
       throw new BadRequestError('Por favor, ingresa email y contraseña');
     }
-
+    console.log('🔍 Intento de login con email:', email);
+    console.log('📦 Body recibido:', req.body);
+    const users = await User.find();
+    console.log(users)
     // 2. Buscar usuario por email y seleccionar la contraseña (si está marcada como select: false en el modelo)
     const user = await User.findOne({ email }).select('+password');
     // 3. Verificar si el usuario existe
+    console.log('👤 Usuario encontrado:', user ? 'Sí' : 'No');
     if (!user) {
       throw new UnauthorizedError('Credenciales inválidas');
     }

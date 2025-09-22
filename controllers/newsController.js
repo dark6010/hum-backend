@@ -58,6 +58,36 @@ export const getNews = async (req, res, next) => {
       next(error);
     }
 };
+export const getNewsById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    // Validar que el ID tenga formato válido de MongoDB
+    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+      return res.status(400).json({
+        success: false,
+        message: 'ID de noticia no válido'
+      });
+    }
+
+    const news = await News.findById(id);
+
+    if (!news) {
+      return res.status(404).json({
+        success: false,
+        message: 'Noticia no encontrada'
+      });
+    }
+
+    res.json({
+      success: true,
+      data: news
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
 // export const updateNews = async ({body:{title, content, category, excerpt}, files, params:{id} }, res, next) => {
 export const updateNews = async ({body, files, params:{id} }, res, next) => {
 // export const updateNews = async (req, res, next) => {

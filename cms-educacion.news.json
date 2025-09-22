@@ -19,25 +19,6 @@
 },
 {
   "_id": {
-    "$oid": "6849d7541b4f1030ddca5023"
-  },
-  "title": "Esta es otra nueva noticia",
-  "content": "Lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. it was popularised in the 1960s with the release of letraset sheets containing lorem ipsum passages, and more recently with desktop publishing software like aldus pagemaker including versions of lorem ipsum.",
-  "category": "nacional internacional",
-  "excerpt": "Resumen lorem ipsun",
-  "images": [
-    "images-1749669716603-16536785.webp"
-  ],
-  "createdAt": {
-    "$date": "2025-06-11T19:21:56.614Z"
-  },
-  "updatedAt": {
-    "$date": "2025-06-11T19:21:56.615Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
     "$oid": "6849d8841b4f1030ddca502b"
   },
   "title": "Titulo creado 3",
@@ -71,6 +52,200 @@
   },
   "updatedAt": {
     "$date": "2025-06-21T03:03:17.518Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68bf04f4a673d81c7d586842"
+  },
+  "title": "Sssa dsa d asdas as",
+  "content": "As d ad asd ads ads\r\nas d ad asd ads ads\r\nas d ad asd ads ads\r\nas d ad asd ads ads\r\nas d ad asd ads ads\r\nv\r\nas d ad asd ads ads\r\nas d ad asd ads ads\r\nas d ad asd ads ads",
+  "category": "Eventos",
+  "excerpt": "Asd asd asd sa dasd asd asd asd asd asdas d ad asd ads ads",
+  "images": [
+    "images-1757349108629-307121162.png"
+  ],
+  "createdAt": {
+    "$date": "2025-09-08T16:31:48.713Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-08T16:31:48.725Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68bf06e6a673d81c7d586846"
+  },
+  "title": "Lkjhl kjl kjhkj bkjh kjhkj hkjh kjasda",
+  "content": "Sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd",
+  "category": "Académico",
+  "excerpt": "Sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd  sasdasd asd as das da dasd asd asd asd asd asd asd as dasd asd",
+  "images": [
+    "images-1757349606042-166728286.png"
+  ],
+  "createdAt": {
+    "$date": "2025-09-08T16:40:06.098Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-08T16:40:06.100Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68bf072ca673d81c7d586849"
+  },
+  "title": "Asasdsa dsdasd asd adsasd as",
+  "content": "Asdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd adasdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd adasdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd adasdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd adasdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd adasdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd adasdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd ad",
+  "category": "Eventos",
+  "excerpt": "Asdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd adasdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd adasdasdasd asd as as asasddas dasd asdasd asd asd asd asd asd ad",
+  "images": [
+    "images-1757349676578-634670588.png"
+  ],
+  "createdAt": {
+    "$date": "2025-09-08T16:41:16.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-08T16:41:16.644Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68c1a09fdbe93dd750af0e05"
+  },
+  "title": "Ainmain mainmain main",
+  "content": "Main mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain main",
+  "category": "Eventos",
+  "excerpt": "Main mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain mainmain main",
+  "images": [
+    "images-1757520031665-53839325.png"
+  ],
+  "createdAt": {
+    "$date": "2025-09-10T16:00:31.699Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T16:00:31.700Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68c1a30edbe93dd750af0e0e"
+  },
+  "title": "Main snskn dkndndskn sknsk nskn skn sk",
+  "content": "Dsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasda",
+  "category": "Investigación",
+  "excerpt": "Dsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasda",
+  "images": [
+    "images-1757520654866-632959625.png"
+  ],
+  "createdAt": {
+    "$date": "2025-09-10T16:10:54.921Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T16:10:54.922Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68c1a32cdbe93dd750af0e11"
+  },
+  "title": "Dsadsaddasdsaddasdadsadsaddasdsaddasda",
+  "content": "Dsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasda",
+  "category": "Eventos",
+  "excerpt": "Dsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasdadsadsaddasdsaddasda",
+  "images": [
+    "images-1757522903464-275849363.jpeg"
+  ],
+  "createdAt": {
+    "$date": "2025-09-10T16:11:24.857Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T16:11:24.859Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68c1a366dbe93dd750af0e14"
+  },
+  "title": "Dimension oculta",
+  "content": "Dimension dimensiondimensiondimensiondimensiondimensiondimensiondimensiondimensiondimensiondimensiondimensiondimensiondimension",
+  "category": "Investigación",
+  "excerpt": "Referente a dimensiones ocultas",
+  "images": [
+    "images-1757520741947-132271139.png"
+  ],
+  "createdAt": {
+    "$date": "2025-09-10T16:12:22.004Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T16:12:22.006Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68c1a38adbe93dd750af0e19"
+  },
+  "title": "Trata de algo nuevo er er",
+  "content": "Mainsmainsmainsmainsmainsmainsmainsmainsmainsmainsmainsmains",
+  "category": "Nacional",
+  "excerpt": "Dsadfa asd",
+  "images": [
+    "images-1758088672613-428705030.jpeg"
+  ],
+  "createdAt": {
+    "$date": "2025-09-10T16:12:58.320Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T16:12:58.321Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ca53520c3ddce7b0be9835"
+  },
+  "title": "Mainless",
+  "content": "Lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. it was popularised in the 1960s with the release of letraset sheets containing lorem ipsum passages, and more recently with desktop publishing software like aldus pagemaker including versions of lorem ipsum.\r\ncontrary to popular belief, lorem ipsum is not simply random text. it has roots in a piece of classical latin literature from 45 bc, making it over 2000 years old. richard mcclintock, a latin professor at hampden-sydney college in virginia, looked up one of the more obscure latin words, consectetur, from a lorem ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. lorem ipsum comes from sections 1.10.32 and 1.10.33 of \"de finibus bonorum et malorum\" (the extremes of good and evil) by cicero, written in 45 bc. this book is a treatise on the theory of ethics, very popular during the renaissance. the first line of lorem ipsum, \"lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\r\nlorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "category": "Académico",
+  "excerpt": "Esto trata de un resumen corto",
+  "images": [
+    "images-1758090066914-349780743.webp",
+    "images-1758090066915-826750029.webp",
+    "images-1758090066916-71890067.webp"
+  ],
+  "createdAt": {
+    "$date": "2025-09-17T06:21:06.946Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-17T06:21:06.965Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ca63680c3ddce7b0be9866"
+  },
+  "title": "Corregido 33",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. cras at libero vel augue interdum facilisis et sed lorem. mauris sed faucibus ipsum, sit amet suscipit velit. nunc quis ultrices nulla. donec quis placerat lectus. praesent non egestas ante. sed id posuere nunc. nunc in lectus a ante tincidunt fringilla.\r\n\r\nmaecenas dapibus varius molestie. aenean vestibulum eros eget dolor interdum consequat. maecenas gravida tempus eros et aliquam. mauris pharetra leo vel lorem facilisis, vel feugiat tellus finibus. donec iaculis urna ante. vestibulum convallis purus quis nibh porta auctor. duis ut aliquet est, at accumsan nisl. aenean suscipit pretium sollicitudin. donec a quam vel orci suscipit hendrerit. etiam vitae lobortis lorem, vel vehicula enim. vestibulum vulputate nisi ut commodo laoreet. nunc vitae magna volutpat, ullamcorper urna vel, auctor risus. integer aliquet porta nulla ut aliquam. etiam lectus ipsum, rutrum id tristique quis, vestibulum a arcu. sed vel convallis neque, eget sagittis nibh. nulla lobortis elementum massa, nec tincidunt nisl laoreet quis.\r\n\r\naenean ac libero lorem. sed nec lacus et odio sollicitudin suscipit non eu lacus. fusce in sem ultricies, dictum eros non, placerat nibh. sed cursus nisl eget est suscipit fermentum. donec porta, leo ut vestibulum tincidunt, dui sapien laoreet lectus, ac euismod ante eros nec erat. aliquam erat volutpat. cras mattis ipsum id odio gravida semper. aenean molestie sodales massa, volutpat ornare mi viverra sed.\r\n\r\naenean a bibendum ante. quisque in urna fringilla, maximus orci ac, pulvinar ligula. vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; proin sem sem, commodo a egestas quis, congue sed quam. morbi sed commodo ex. vestibulum a feugiat dui. fusce in lorem metus. in congue at nulla non interdum. nunc ultrices arcu non odio maximus, at commodo felis sagittis. fusce congue auctor arcu, a vulputate ex tempor at. vestibulum eu turpis sed orci porttitor accumsan sed sit amet nunc.\r\n\r\ninteger aliquet ante quis mi elementum, in commodo felis volutpat. curabitur vitae fringilla enim, et lobortis massa. quisque lobortis molestie arcu. nam eget nunc rhoncus, fringilla elit id, porta mi. maecenas pharetra dignissim enim non hendrerit. curabitur faucibus pretium sollicitudin. etiam faucibus libero ipsum, a tristique felis lacinia nec. morbi sollicitudin vitae turpis faucibus tincidunt. pellentesque sed tincidunt diam. aenean sodales turpis a mollis ornare.",
+  "category": "Investigación",
+  "excerpt": "Sa sdas a sa as as as",
+  "images": [
+    "images-1758096171830-392365126.webp",
+    "images-1758096171831-513483138.webp",
+    "images-1758096171832-652724415.jpg"
+  ],
+  "createdAt": {
+    "$date": "2025-09-17T07:29:44.437Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-17T07:29:44.439Z"
   },
   "__v": 0
 }]
